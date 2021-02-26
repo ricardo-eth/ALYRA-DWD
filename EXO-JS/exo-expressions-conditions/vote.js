@@ -1,9 +1,7 @@
 let age = 20
-let canVote = false
+let canVote = age >= 18 ? true : false
 
-let msg = age >= 18 ? canVote = true : canVote = false
-
-let youCanVote = canVote === true ? 'You can vote' : 'You can not vote'
+let youCanVote = canVote ? 'You can vote' : 'You can not vote'
 
 console.log(youCanVote)
 
