@@ -1,0 +1,279 @@
+:root {
+  --yellow: #eef13f;
+  --orange: #fe6638;
+  --green: #80b238;
+  --blue: #80c1d6;
+  --textShadowWhite: 2px 2px white;
+  --textShadowDark: 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--blue);
+  color: #fff;
+  font-family: Atma, sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h1 + p,
+button {
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ... Your turn! ... */
+
+main section:last-child {
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.2);
+}
+
+/* =============== nav section ================ */
+
+nav {
+  background-color: rgba(128, 178, 56, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  nav li {
+    transition: transform 0.2s;
+  }
+
+  nav li:nth-child(odd):hover {
+    transform: scale(1.2) rotate(3deg);
+  }
+
+  nav li:nth-child(even):hover {
+    transform: scale(1.2) rotate(-3deg);
+  }
+}
+
+/* =============== header section ================ */
+
+header {
+  min-height: 100vh;
+  background-image: url(../img/blue-splash.png);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+header h1,
+p {
+  color: var(--orange);
+  margin: 0;
+  text-shadow: var(--textShadowWhite);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+}
+
+@media (min-width: 640px) {
+  header h1 {
+    font-size: 8rem;
+  }
+
+  header p {
+    font-size: 4rem;
+  }
+}
+
+/* =============== section ================ */
+
+section {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+section h2 {
+  font-size: 4rem;
+  text-shadow: var(--textShadowDark);
+}
+
+@media (max-width: 639px) {
+  section h2 {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  section {
+    text-align: center;
+    padding: 5rem;
+  }
+}
+
+/* =============== grid section ================ */
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.grid article {
+  margin: 10px;
+  padding: 10px;
+  flex: 1;
+}
+
+.grid article * {
+  margin: 0;
+}
+
+.grid a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    flex-direction: row;
+    max-width: 1024px;
+  }
+}
+
+/* =============== obstacles section ================ */
+
+.obstacles {
+  background-color: var(--orange);
+}
+
+.obstacles-group article {
+  background-color: var(--green);
+  border-radius: 20px;
+}
+
+.obstacles-group article:hover {
+  background-color: var(--yellow);
+}
+
+.obstacles-group article:hover a {
+  color: var(--orange);
+}
+
+/* =============== prizes section ================ */
+
+.prizes {
+  background-color: var(--green);
+}
+
+.prizes-group article {
+  background-color: var(--green);
+  border-color: var(--yellow);
+  border-style: dotted;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prizes img {
+  transition: transform 0.5s;
+}
+
+.prizes img:hover {
+  transform: rotate(180deg);
+}
+
+/* =============== apply section ================ */
+
+.apply .wrap {
+  max-width: 720px;
+  margin: auto;
+}
+
+.apply form {
+  text-align: left;
+}
+
+.apply form > * {
+  margin-top: 20px;
+}
+
+.apply ::placeholder {
+  color: white;
+  font-family: Atma, sans-serif;
+  font-size: 1.5rem;
+}
+
+.apply form input {
+  border-style: none;
+  background-color: var(--orange);
+  border-radius: 10px;
+  padding: 20px 10px;
+  font-family: Atma, sans-serif;
+  font-size: 1.5rem;
+}
+
+.apply label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.apply button {
+  border-style: none;
+  background-color: var(--yellow);
+  text-shadow: var(--textShadowDark);
+  color: black;
+  border-radius: 10px;
+  padding: 25px 30px;
+  font-size: 1.5rem;
+}
+
+footer {
+  border-top: 0.5rem solid rgba(0, 0, 0, 0.2);
+  color: black;
+  background-color: var(--yellow);
+  text-align: center;
+  padding: 20px;
+}
