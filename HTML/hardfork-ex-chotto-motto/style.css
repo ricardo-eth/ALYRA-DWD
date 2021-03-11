@@ -1,0 +1,102 @@
+/*
+Vous commencez votre carrière en tant qu'intégrateur web. Votre premier client est un renommé chef japonnais Daichi Sakamoto.
+Son designer japonais a prépare pour vous une maquette minimaliste, aérée et très lisible 
+vous pouvez voir son prototype en action ici https://cdpn.io/alyra/debug/8492b4775f2abb53fcd260adf4173723
+La police utilisée ici - Changa - c'est une police google fonts à charger dans HTML settings > head stuff
+La référence de la couleur jaune - #fee500
+*/
+/* ref: https://s3-us-west-2.amazonaws.com/s.cdpn.io/1328554/chottomotto.png (images/chottomotto) */
+
+/* ajouter une bordure jaune autour du body 24px  */
+/* changer la police pour Changa, laisser le sans-serif comme le 2e choix */
+/* augmente la taille de police au 20px, l'interligne de 1.8 */
+:root {
+  --dark: #212121;
+  --brand: #fee500;
+  --space-sm: 0.75rem;
+  --shadowDimension: var(--space-sm) var(--space-sm) 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Changa", sans-serif;
+  margin: 0;
+  padding: 1.875rem;
+  color: var(--dark);
+  border: 24px solid var(--brand);
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* le block contenu est centré ne dépasse pas la largeur de 720px */
+main {
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main img {
+  box-shadow: var(--shadowDimension) var(--brand);
+}
+
+/* les images ne dépassent pas l'écran */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* centrer les éléments de la partie header */
+header {
+  text-align: center;
+}
+
+/* titre h2 centré */
+h2,
+.intro {
+  font-size: 1.375rem;
+  text-align: center;
+}
+
+/* les éléments dans le footer centrée */
+footer {
+  text-align: center;
+}
+
+/* la liste sans bullets */
+/* pas de marge ni de padding */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* les éléments de la liste affichés dans une ligne */
+nav li {
+  display: inline;
+}
+
+/* les liens dans la partie navigation en majuscules, couleur noir */
+/* espacés de 12px */
+nav a {
+  text-decoration: none;
+  padding: 4px 12px;
+
+  color: var(--dark);
+  background-color: var(--brand);
+}
+
+/* le lien dans la partie navigation en survol devient jaune  */
+nav a:hover {
+  color: white;
+  background-color: var(--dark);
+}
+
+@media screen and (min-width: 640px) {
+  h2,
+  .intro {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
